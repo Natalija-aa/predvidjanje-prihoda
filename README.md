@@ -34,6 +34,7 @@ Projekat obuhvata kompletan proces:
 ## Kako Pokrenuti Projekat
 
 ### 1. Kloniranje Repozitorijuma
-Otvorite terminal i izvršite sljedeću komandu:```bash
-git clone [URL Vašeg GitHub repozitorijuma]
-cd [Ime Vašeg Repozitorijuma]
+Otvorite terminal i izvršite sljedeću komandu:
+```bash
+git clone https://github.com/Natalija-aa/predvidjanje-prihoda.git
+cd predvidjanje-prihoda

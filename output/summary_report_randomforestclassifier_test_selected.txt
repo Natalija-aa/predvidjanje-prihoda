@@ -1,0 +1,40 @@
+Izvještaj o performansama modela: RandomForestClassifier (Selektovani feature - TEST)
+
+Model tip: RandomForestClassifier
+
+Ukupna taènost (Accuracy): 0.8228
+Ukupna preciznost (Precision): 0.8591
+Ukupan odziv (Recall): 0.8228
+Ukupan F1-Score (weighted): 0.8320
+
+Detaljan klasifikacioni izvještaj:
+              precision    recall  f1-score   support
+
+       <=50K       0.94      0.82      0.87     11571
+        >50K       0.59      0.85      0.70      3646
+
+    accuracy                           0.82     15217
+   macro avg       0.77      0.83      0.79     15217
+weighted avg       0.86      0.82      0.83     15217
+
+
+Matrica konfuzije (stvarna vs predviðena):
+Prave negativne (TN): 9438
+Lažne pozitivne (FP): 2133
+Lažne negativne (FN): 564
+Prave pozitivne (TP): 3082
+
+[[9438 2133]
+ [ 564 3082]]
+
+Najvažniji feature:
+- marital_status_Married_civ_spouse: 0.2384
+- education_num: 0.1366
+- capital_gain: 0.1303
+- age: 0.1235
+- hours_per_week: 0.0789
+- marital_status_Never_married: 0.0687
+- capital_loss: 0.0387
+- relationship_Not_in_family: 0.0282
+- sex_Male: 0.0276
+- relationship_Own_child: 0.0246

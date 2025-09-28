@@ -1,7 +1,7 @@
 # Ignoriši foldere sa generisanim fajlovima
     output/
     models/
-
+    
     # Ignoriši Python cache foldere
     __pycache__/
     *.pyc

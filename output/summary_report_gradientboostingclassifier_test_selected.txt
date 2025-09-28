@@ -1,0 +1,40 @@
+Izvještaj o performansama modela: GradientBoostingClassifier (Selektovani feature - TEST)
+
+Model tip: GradientBoostingClassifier
+
+Ukupna taènost (Accuracy): 0.8299
+Ukupna preciznost (Precision): 0.8597
+Ukupan odziv (Recall): 0.8299
+Ukupan F1-Score (weighted): 0.8379
+
+Detaljan klasifikacioni izvještaj:
+              precision    recall  f1-score   support
+
+       <=50K       0.94      0.83      0.88     11571
+        >50K       0.61      0.83      0.70      3646
+
+    accuracy                           0.83     15217
+   macro avg       0.77      0.83      0.79     15217
+weighted avg       0.86      0.83      0.84     15217
+
+
+Matrica konfuzije (stvarna vs predviðena):
+Prave negativne (TN): 9598
+Lažne pozitivne (FP): 1973
+Lažne negativne (FN): 616
+Prave pozitivne (TP): 3030
+
+[[9598 1973]
+ [ 616 3030]]
+
+Najvažniji feature:
+- marital_status_Married_civ_spouse: 0.4575
+- education_num: 0.1743
+- capital_gain: 0.1275
+- age: 0.1112
+- hours_per_week: 0.0734
+- capital_loss: 0.0274
+- occupation_Exec_managerial: 0.0091
+- occupation_Other_service: 0.0050
+- sex_Male: 0.0041
+- workclass_Self_emp_not_inc: 0.0027

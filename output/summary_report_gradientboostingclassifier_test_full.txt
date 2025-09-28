@@ -1,0 +1,40 @@
+Izvještaj o performansama modela: GradientBoostingClassifier (Svi feature - TEST)
+
+Model tip: GradientBoostingClassifier
+
+Ukupna taènost (Accuracy): 0.8293
+Ukupna preciznost (Precision): 0.8579
+Ukupan odziv (Recall): 0.8293
+Ukupan F1-Score (weighted): 0.8372
+
+Detaljan klasifikacioni izvještaj:
+              precision    recall  f1-score   support
+
+       <=50K       0.94      0.83      0.88     11571
+        >50K       0.61      0.82      0.70      3646
+
+    accuracy                           0.83     15217
+   macro avg       0.77      0.83      0.79     15217
+weighted avg       0.86      0.83      0.84     15217
+
+
+Matrica konfuzije (stvarna vs predviðena):
+Prave negativne (TN): 9617
+Lažne pozitivne (FP): 1954
+Lažne negativne (FN): 643
+Prave pozitivne (TP): 3003
+
+[[9617 1954]
+ [ 643 3003]]
+
+Najvažniji feature:
+- marital_status_Married_civ_spouse: 0.4772
+- education_num: 0.1296
+- capital_gain: 0.1201
+- age: 0.0983
+- hours_per_week: 0.0755
+- capital_loss: 0.0235
+- occupation_Exec_managerial: 0.0130
+- education_HS_grad: 0.0087
+- native_country_United_States: 0.0076
+- occupation_Prof_specialty: 0.0048

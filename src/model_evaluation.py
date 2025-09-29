@@ -78,7 +78,7 @@ def generate_summary_report(model, X, y_true, class_names, filename, output_fold
     y_pred = model.predict(X)
     report_content = []
 
-    report_content.append(f"Izvještaj o performansama modela: {model_description}")
+    report_content.append(f"Izvjestaj o performansama modela: {model_description}")
     report_content.append(f"\nModel tip: {model.__class__.__name__}")
 
     accuracy = accuracy_score(y_true, y_pred)
@@ -86,29 +86,29 @@ def generate_summary_report(model, X, y_true, class_names, filename, output_fold
     recall = recall_score(y_true, y_pred, average='weighted', zero_division=0)
     f1 = f1_score(y_true, y_pred, average='weighted', zero_division=0)
 
-    report_content.append(f"\nUkupna tačnost (Accuracy): {accuracy:.4f}")
+    report_content.append(f"\nUkupna tacsost (Accuracy): {accuracy:.4f}")
     report_content.append(f"Ukupna preciznost (Precision): {precision:.4f}")
     report_content.append(f"Ukupan odziv (Recall): {recall:.4f}")
     report_content.append(f"Ukupan F1-Score (weighted): {f1:.4f}")
 
-    report_content.append("\nDetaljan klasifikacioni izvještaj:")
+    report_content.append("\nDetaljan klasifikacioni izvjestaj:")
     report_content.append(classification_report(y_true, y_pred, target_names=class_names, zero_division=0))
 
     cm = confusion_matrix(y_true, y_pred)
-    report_content.append("\nMatrica konfuzije (stvarna vs predviđena):")
+    report_content.append("\nMatrica konfuzije (stvarna vs predvidjena):")
     report_content.append(f"Prave negativne (TN): {cm[0, 0]}")
-    report_content.append(f"Lažne pozitivne (FP): {cm[0, 1]}")
-    report_content.append(f"Lažne negativne (FN): {cm[1, 0]}")
+    report_content.append(f"Lazne pozitivne (FP): {cm[0, 1]}")
+    report_content.append(f"Lazne negativne (FN): {cm[1, 0]}")
     report_content.append(f"Prave pozitivne (TP): {cm[1, 1]}")
     report_content.append("\n" + str(cm))
 
     importances = get_feature_importance(model, X.columns, top_n=10)
     if importances is not None:
-        report_content.append("\nNajvažniji feature:")
+        report_content.append("\nNajvazniji feature:")
         for idx, val in importances.items():
             report_content.append(f"- {idx}: {val:.4f}")
     else:
-        report_content.append("\nVažnost feature nije dostupna za ovaj tip modela.")
+        report_content.append("\nVaznost feature nije dostupna za ovaj tip modela.")
 
     filepath = os.path.join(output_folder, filename)
     with open(filepath, 'w') as f:
